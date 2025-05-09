@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kashika Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+<div class="mobile-view " >
+    <header class="mobile-header" id="fi">
+      <div class="contact-info">
+        <div class="contactin"><p><a href="tel:+917355026966"><span><b>Tel no</b></span>: +917355026966</a></p>
+            <p><a href="mailto:anubhavsingh2106@gmail.com"><span><b>Email</b></span>:anubhavsingh2106@gmail.com</a></p></div>
+      </div>
+      <div class="nav">
+        <div class="nav-logo">
+          <img src="logo.png" alt="Kashika Travel Logo">
+        </div>
+        <div class="menu-icon" onclick="toggleNav()">☰</div>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="#home" onclick="disableNavLinks()">Home</a></li>
+        <li><a href="#about-us" onclick="disableNavLinks()">About Us</a></li>
+        <li><a href="#special-packages" onclick="disableNavLinks()">Special Packages</a></li>
+        <li><a href="#car-rental" onclick="disableNavLinks()">Car Rental</a></li>
+        <li><a href="#about" onclick="disableNavLinks()">Varanasi Tour</a></li>
+        <li class="book">
+          <a href="#book-package" onclick="disableNavLinks()">BOOK YOUR PACKAGE</a>
+        </li>
+      </ul>
+        </header>
+            </div>
+  <div class="laptop-view" >
+    <header class="laptop-header">
+      <div class="nav">
+        <div class="nav-logo">
+          <img src="logo.png" alt="Kashika Travel Logo">
+        </div>
+        <div class="contact-info">
+          <p><a href="tel:+7355026966"><span><b>Tel no</b></span>: +91 7355026966</a></p>
+          <p><a href="mailto:anubhavsingh2106@gmail.com"><span><b>Email</b></span>: anubhavsingh2106@gmail.com</a></p>
+        </div>
+      </div>
+    <ul class="nav-links">
+        <li ><a href="#home">Home</a></li>
+        <li><a href="#about-us">About us</a></li>
+        <li><a href="#special-packages">Special Packages</a></li>
+        <li><a href="#car-rental">Car Rental</a></li>
+        <li><a href="#about">Varanasi Tour</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <div class="sp2"></div>
+        <li class="book">
+          <a href="#book-package" id="spbook"  class="booksize">BOOK YOUR PACKAGE</a>
+        </li>
+      </ul>
+  </header>
+  </div>
+  <div class="fixed-icons">
+    <a href="tel:+917355026966" class="call-icon">
+      <i class="fa-solid fa-phone" style="color: #74C0FC;"></i>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=7355026966" class="whatsapp-icon">
+      <i class="fa-brands fa-whatsapp fa-xl" style="color: #74C0FC;"></i>
+    </a>
+  </div>
+    <main>
+   <section id="home" class="hero" >
+      <div class="slideshow">
+          <img src="banner1.jpg" alt="Banner 1" class="slide" loading="lazy">
+          <img src="http://kashikatravel.com/images/bannerbg2.jpg" alt="Banner 2" class="slide" loading="lazy">
+          <img src="https://wallpapercave.com/wp/wp6612935.jpg" alt="Banner 3" class="slide" loading="lazy">
+      </div>
+      <div class="indicators"></div>
+  </section>
+  <section id="special-packages" class="special-packages">
+    <h2>Special <span>Packages</span></h2>
+    <div class="package-grid">
+        <div class="package-item">
+            <div class="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs4x66stYYQ9_poA-RY0iRxC0o9hJQgJCQGVE0e8QmU7zdnT0460ZvpydojcUif2ovEa0&usqp=CAU" alt="Kashi Dham Tour">
+                <div class="duration-label">Duration:1 Full day</div>
+            </div>
+            <h3>Kashi Dham Tour</h3>
+            <p>Explore the sacred temples of Varanasi, with guided tours of the holy Kashi Dham.</p>
+            <div class="package-actions">
+                <a href="#book-package" class="action-btn">Book Package</a>
+                <a href="#about" class="action-btn">About</a>
+            </div>
+        </div>
+        <div class="package-item">
+            <div class="image-container">
+                <img src="https://i.ytimg.com/vi/kDlavpEkbb8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCxFZQ4ydvd_kWCTTnVStGiu_fKew" alt="Kashi to Prayagraj Tour">
+                <div class="duration-label">Duration:2 Nights/3 Days</div>
+            </div>
+            <h3>Kashi to Prayagraj Tour</h3>
+            <p>A journey from Kashi to Prayagraj, visiting sacred sites along the way.</p>
+            <div class="package-actions">
+                <a href="#book-package" class="action-btn">Book Package</a>
+                <a href="#about" class="action-btn">About</a>
+            </div>
+        </div>
+        <div class="package-item">
+            <div class="image-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2_l4GRJQVdc53338_tkk-eM0_MhxZKHxK5ejt24-eyS6k5RDXgBE8JMIgfbFK5q_0N8Q&usqp=CAU" alt="Kashi-Allahabad-Bodhgaya Tour">
+                <div class="duration-label">Duration:3 Nights/4 Days</div>
+            </div>
+            <h3>Kashi-Allahabad-Bodhgaya Tour</h3>
+            <p>Embark on a spiritual journey to the three important pilgrimage sites of Kashi, Allahabad, and Bodhgaya.</p>
+            <div class="package-actions">
+                <a href="#book-package" class="action-btn">Book Package</a>
+                <a href="#about" class="action-btn">About</a>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="about" class="about">
+        <h2>About <span>Varanasi</span></h2>
+        <div class="varanasi-highlight">
+            <div class="highlight-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlXm4G8nlga6K0kcZonik9CHL3RAK_NfWYHg&s" alt="Shree Kashi Vishwanath">
+                <h3>Shree Kashi Vishwanath Temple</h3>
+                <p>One of the most sacred temples in India, dedicated to Lord Shiva, located in the heart of Varanasi.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://kashiyatra.in/wp-content/uploads/2023/02/ganga-aarti.jpg" alt="Ganga Aarti">
+                <h3>Ganga Aarti</h3>
+                <p>A divine ritual performed at the ghats of Varanasi to honor the holy river Ganges.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://media.istockphoto.com/id/505843236/photo/view-of-varanasi-india.jpg?s=612x612&w=0&k=20&c=j75uFPrDa60hTHmXPmvqD23j_WYxMQ4VMbFTjXqN-Jc=" alt="Dashashwamedh Ghat">
+                <h3>Dashashwamedh Ghat</h3>
+                <p>One of the most prominent and bustling ghats in Varanasi, known for its stunning aarti ceremonies.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://www.shutterstock.com/shutterstock/videos/3509034973/thumb/1.jpg?ip=x480" alt="Sarnath">
+                <h3>Sarnath</h3>
+                <p>A significant Buddhist site, where Lord Buddha gave his first sermon after attaining enlightenment.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://www.shutterstock.com/shutterstock/videos/3558065331/thumb/1.jpg?ip=x480" alt="Namo Ghat">
+                <h3>Namo Ghat</h3>
+                <p>A newly developed ghat, known for its peaceful environment and modern amenities.</p>
+            </div>
+             <div class="highlight-item">
+                <img src="https://www.rvcj.com/wp-content/uploads/2019/11/Bharat-Kala-Bhavan-Museum.jpg" alt="Namo Ghat">
+                <h3>Bharat Kala Bhavan</h3>
+                <p>
+                    Bharat Kala Bhavan in Varanasi is a premier museum showcasing India's rich cultural and artistic heritage through its vast collection of artifacts and artworks.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://th.bing.com/th/id/OIP.zmG7vVGaqQg2GjjnYCDOQgAAAA?rs=1&pid=ImgDetMain" alt="Ramnagar fort ">
+                <h3>Ramnagar Fort</h3>
+                <p>
+                    Ramnagar Fort in Varanasi is a historic fort on the banks of the Ganges, known for its stunning architecture and royal heritage.</p>
+            </div>
+            <div class="highlight-item">
+                <img src="https://i.ytimg.com/vi/y_Neql8GKWI/maxresdefault.jpg" alt="Bhu Vishwanath Temple ">
+                <h3>Bhu Vishwanath Temple </h3>
+                <p>
+                    Bhu Vishwanath Temple in Varanasi is a revered Hindu shrine dedicated to Lord Shiva, known for its spiritual significance and intricate architecture.</p>
+            </div>
+        </div>
+    </section>
+    <section id="car-rental" class="car-rental">
+        <h2>Car <span>Rental Services</span></h2>
+        <div class="rental-grid">
+            <div class="rental-item">
+                <img src="https://i.pinimg.com/736x/0e/0d/a2/0e0da2818b70f0eed5f478bd4a893b13.jpg" alt="Maruti Dzire">
+                <h3>Maruti Dzire</h3>
+                <p>A compact sedan perfect for small groups or families. Comfortable and fuel-efficient.</p>
+            </div>
+            <div class="rental-item">
+                <img src="https://imgcdn.zigwheels.ph/large/gallery/color/30/1108/toyota-innova-color-157955.jpg" alt="Toyota Innova">
+                <h3>Toyota Innova</h3>
+                <p>An ideal choice for medium-sized families or groups, offering ample space and luxury.</p>
+            </div>
+            <div class="rental-item">
+                <img src="https://www.jcrcab.com/wp-content/uploads/2020/07/Force-Tempo-Traveller-non-ac-1250x917.jpg" alt="Tempo Traveller">
+                <h3>Tempo Traveller</h3>
+                <p>A spacious option for larger groups. Perfect for long journeys with comfort and ease.</p>
+            </div>
+            <div class="rental-item">
+                <img src="https://th.bing.com/th/id/OIP.IFno55KEF1fH1dzebLQL_gHaEX?w=512&h=302&rs=1&pid=ImgDetMain" alt="Deluxe Coach">
+                <h3>Deluxe Coach</h3>
+                <p>Best suited for large groups and tours, offering a premium travel experience.</p>
+            </div>
+        </div>
+    </section>
+    <section id="book-package" class="book-package">
+        <h2>Book Your <span>Favorite Package</span> Now!</h2>
+        <div class="book-package-container">
+            <div class="book-package-image">
+                <img src="http://kashikatravel.com/images/family.png" alt="Family Package">
+            </div>
+            <div class="book-package-form">
+                <form id="yourFormId" action="/book-package" method="post">
+
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="mobile" placeholder="Mobile Number" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="text" name="city" placeholder="City" required>
+                    <input type="date" name="date" required>
+                    <div class="passenger-count">
+                        <select name="adults" required>
+                            <option value="" disabled selected>Adults (1-9)</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                        <select name="children">
+                            <option value="" disabled selected>Children (0-9)</option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                        </select>
+                    </div>
+                    <textarea name="message" placeholder="If any message"></textarea>
+                    <button type="submit">Book Now</button>
+                    
+                </form>
+                
+                <div id="loader"></div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about-us" class="about-us">
+        <h2>About <span>Us</span></h2>
+        <div class="about-us-content">
+            <div class="about-us-image">
+                <img src="logo.png" alt="Kashika Travel Logo">
+            </div>
+            <div class="about-us-text">
+                <p>Kashika Travel is the handling agent in Varanasi, Hindu Pilgrimage, and the entire Buddhist Circuit. Our office is based in the Holy City of Varanasi.</p>
+                <p>We are having our own fleet of Vehicles Like Tata Etios,Dzire, Toyota Innova/ Tempo Traveller ( 9+1 Seater ). The Vehicles that are provided to our Highly esteemed clients are all well maintained and every care has been taken in providing the assigning the best drivers who are courteous, Well Mannered and can speak & understand English very well with an experience of more than 10-15 years of experience in the Travel Trade. Support & assistance is provided round the clock with utmost personal care. </p>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-box">
+            <h3>Kashika Travel</h3>
+            <p>Kashika Travel is the handling agent in Varanasi, Hindu Pilgrimage, and the entire Buddhist Circuit. Our office is based in the Holy City of Varanasi.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Address</h3>
+            <p>52 Patel Nagar, Near Hotel New Temple Town, Varanasi - 221002</p>
+        </div>
+        <div class="footer-box help-support">
+            <h3>Help and Support</h3>
+            <div class="help-links">
+                <div class="link-column">
+                    <a href="#about-us">About Us</a>
+                    <a href="#varanasi-service">Varanasi Service</a>
+                </div>
+                <div class="link-column">
+                    <a href="#enquiry">Enquiry</a>
+                    <a href="#varanasi-tours">Varanasi Tours</a>
+                </div>
+                <div class="link-column">
+                    <a href="#car-rental">Car Rental</a>
+                    <a href="#contact-us">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <h2>&copy; 2024 Kashika Travel</h2>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
