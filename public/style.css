@@ -80,7 +80,7 @@ body, html {
 }
 .mobile-nav-links.active {
     max-height: 400px;
-   margin-top: 145px;
+   margin-top: 135px;
    margin-bottom: 15px; 
    position: fixed;
    z-index: 10;
