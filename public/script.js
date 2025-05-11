@@ -37,6 +37,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   showSlide(0);
 });
+
+
+  function updateBannerForMobile() {
+    const isMobile = window.matchMedia("(max-width: 550px)").matches;
+    const slides = document.querySelectorAll(".slideshow .slide");
+
+    // Check if second image exists
+    if (slides.length >= 2) {
+      if (isMobile) {
+        slides[1].src = "banner2.png";
+      } else {
+       slides[1].src = "http://kashikatravel.com/images/bannerbg2.jpg";
+      }
+    }
+  }
+
+  updateBannerForMobile();
+
+  // Run whenever screen size changes
+  window.addEventListener("resize", updateBannerForMobile);
+
+
  function toggleNav() {
     const nav = document.querySelector('.mobile-nav-links');
     nav.classList.toggle('active');
