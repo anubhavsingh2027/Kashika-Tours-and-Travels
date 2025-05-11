@@ -7,6 +7,12 @@ body {
     overflow-x: hidden;
   
 }
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
 .contact-info a:hover {
     color: #ffcc00;
 }
@@ -47,7 +53,7 @@ body {
   z-index: 10;
 }
 .mobile-header .nav-logo img {
-    width: 120px;
+    width: 16vw;
 }
 .mobile-header  {
     font-size: 30px;
@@ -56,7 +62,7 @@ body {
     margin-right: 50px;
 }
 .menu-icon{
-    font-size: 30px;
+    font-size: 7vw;
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin-right: 50px;  
@@ -159,82 +165,82 @@ li
 #sphome{
 margin-left: 150px;
 }
+
+/* Fixed Icons */
 .fixed-icons {
-   position: fixed;
-    gap: 15px;
-    bottom: 125px;
-    z-index: 9999;
-    animation: fadeIn 0.5s ease-out;
+  position: fixed;
+  bottom: 15%; /* Adjusted to move icons slightly higher (5% from the bottom) */
+  width: 100%; /* Full width to position left and right icons */
+  z-index: 1000;
+  pointer-events: none; /* Prevent blocking other elements */
+}
+
+.fixed-icons .call-icon,
+.fixed-icons .whatsapp-icon {
+  pointer-events: auto; /* Allow clicking on icons */
+  font-size: 3vw;
+  text-decoration: none;
+  padding: 0.8vw;
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  position: absolute;
+}
+
+.fixed-icons .call-icon {
+  left: 20px; /* Position on the bottom-left */
+  background-color: #f0f8ff; /* Light blue background */
+  color: #0056b3; /* Blue icon color */
+  border: 2px solid #0056b3; /* Blue border */
+}
+
+.fixed-icons .call-icon:hover {
+  transform: scale(1.2); /* Slight zoom-in effect */
+  background-color: #0056b3; /* Darker blue on hover */
+  color: #fff; /* White icon color on hover */
+}
+
+.fixed-icons .whatsapp-icon {
+  right: 20px; /* Position on the bottom-right */
+  background-color: #f5e8e8; /* Light green background */
+  color: #25D366; /* WhatsApp green */
+  border: 2px solid #25D366; /* Green border */
+}
+
+.fixed-icons .whatsapp-icon:hover {
+  transform: scale(1.2); /* Slight zoom-in effect */
+  background-color: #25D366; /* WhatsApp green background */
+  color: #ffffff; /* White icon color on hover */
+  border-color: #128C7E; /* Darker green border on hover */
+}
+
+/* Pulse Effect */
+.fixed-icons .call-icon::after,
+.fixed-icons .whatsapp-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%; /* Slightly smaller pulse size */
+  height: 120%; /* Slightly smaller pulse size */
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.5); /* Red pulse effect with transparency */
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  animation: pulse 1.2s infinite; /* Faster animation for mobile */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
   }
-.call-icon {
-    left: 20px;
-    position: fixed;
-    font-size: 30px;
-    background-color: yellow;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 3px solid transparent; 
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    animation: pulse 1.5s infinite ease-in-out;
+  100% {
+    transform: translate(-50%, -50%) scale(1.5); /* Reduced scale for smaller pulse */
+    opacity: 0;
   }
- .whatsapp-icon {
-    right: 20px;
-    position:fixed ;
-    font-size: 30px;
-    background-color: yellow;
-    padding: 15px;
-    border-radius: 50%;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 3px solid transparent;
-    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    animation: pulse 1.5s infinite ease-in-out;
-  }
-   .call-icon:hover {
-    transform: scale(1.2);
-    background-color: #9cc7f6;
-    border-color: #74C0FC; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-  .whatsapp-icon:hover {
-    transform: scale(1.2);
-    background-color: #aff3eb;
-    border-color: #25D366; 
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-  }
-  .call-icon i, .whatsapp-icon i {
-    text-decoration: none;
-  }
- @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  @keyframes pulse {
-    0% {
-      transform: scale(1);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-color: transparent;
-    }
-    50% {
-      transform: scale(1.1);
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-      border-color: rgba(0, 176, 255, 0.5); /* Add subtle border glow */
-    }
-    100% {
-      transform: scale(1);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-color: transparent;
-    }
-  }
-  
+}
+
 .hero {
     position: relative;
     height: 400px;
@@ -833,13 +839,11 @@ textarea::-webkit-resizer {
   
     .special-packages h2 {
         margin-bottom: 45px;
-        font-size: 65px;
         color: #333;
         text-transform: uppercase;
         margin-top: 220px;
     }
     .about h2 {
-        font-size: 60PX;
         margin-bottom: 40px;
         color: #333;
         text-transform: uppercase;
@@ -847,92 +851,7 @@ textarea::-webkit-resizer {
         margin-top: 220px;
     }
 
-    .fixed-icons {
-   
-        position: fixed;
-         gap: 15px;
-         bottom: 125px;
-         z-index: 9999;
-         animation: fadeIn 0.5s ease-out;
-       }
-
-       .call-icon {
-         left: 20px;
-         position: fixed;
-         font-size: 30px;
-         background-color: yellow;
-         padding: 7px;
-         border-radius: 50%;
-         text-decoration: none;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         border: 3px solid transparent; /* Initial border */
-         transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-         animation: pulse 1.5s infinite ease-in-out;
-       }
-        .whatsapp-icon {
-         right: 20px;
-         position:fixed ;
-         font-size: 30px;
-         background-color: yellow;
-         padding: 7px;
-         border-radius: 50%;
-         text-decoration: none;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         border: 3px solid transparent; 
-         transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-         animation: pulse 1.5s infinite ease-in-out;
-       }
-       
-       .call-icon:hover {
-         transform: scale(1.2);
-         background-color: #77ace5;
-         border-color: #74C0FC; 
-         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-       }
-       
-       .whatsapp-icon:hover {
-         transform: scale(1.2);
-         background-color: #9ce4db;
-         border-color: #6cdd95; 
-         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-       }
-       
-       
-       .call-icon i, .whatsapp-icon i {
-         text-decoration: none;
-       }
- 
-       @keyframes fadeIn {
-         0% {
-           opacity: 0;
-           transform: translateY(20px);
-         }
-         100% {
-           opacity: 1;
-           transform: translateY(0);
-         }
-       }
-
-       @keyframes pulse {
-         0% {
-           transform: scale(1);
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-           border-color: transparent;
-         }
-         50% {
-           transform: scale(1.1);
-           box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-           border-color: rgba(0, 176, 255, 0.5); 
-         }
-         100% {
-           transform: scale(1);
-           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-           border-color: transparent;
-         }
-       }
-    main{
-    padding-left: 30px;
-    }
+    
     .hero {
     position: relative;
     height: 400px;
@@ -1031,6 +950,13 @@ textarea::-webkit-resizer {
     font-weight: normal; 
 } 
   }
+
+  @media (max-width: 600px) {
+    .fixed-icons .call-icon,
+.fixed-icons .whatsapp-icon {
+    padding: 4vw;
+}
+    }
   #loader {
     display: none;
     border: 8px solid #f3f3f3;
@@ -1046,4 +972,977 @@ textarea::-webkit-resizer {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: white;
+    overflow-x: hidden;
+  
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 
+}
+.contact-info a:hover {
+    color: #ffcc00;
+}
+.contactin {
+    display: flex;
+    justify-content: center;
+    background-color: #d8e0ed;
+    color: white;
+    padding: 10px 0;
+   height: 21px;
+    align-items: center;
+    margin-bottom: 5px;
+    width: 110%;
+    position: fixed;
+    top:0px;
+    z-index: 10;
+ 
+}
+.mobile-header .contact-info {
+    display: flex;
+    background-color: #f7fcff;
+    flex-direction: column;
+}
+.mobile-header .contact-info a {
+    color: black;
+    text-decoration: none;
+    margin-right: 50px;
+}
+.mobile-header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #efeded;
+    padding: 10px 20px;
+    position: fixed;
+  width: 105%;
+  top: 38px;
+  z-index: 10;
+}
+.mobile-header .nav-logo img {
+    width: 16vw;
+}
+.mobile-header  {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    margin-right: 50px;
+}
+.menu-icon{
+    font-size: 7vw;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin-right: 50px;  
+}
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+    left: 0;
+    margin-top: 10px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease;
+}
+.mobile-nav-links.active {
+    max-height: 400px;
+   margin-top: 190px;
+   margin-bottom: 15px; 
+   position: fixed;
+   z-index: 10;
+}
+.mobile-nav-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+li
+{
+    list-style: none;
+}
+.laptop-header .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f5f5f5;
+    color: white;
+    height: 120px;
+    position: fixed;
+    top:0px;
+    width: 100%;
+    z-index: 10;
+}
+.laptop-header .nav-logo img {
+    width: 150px;
+}
+.laptop-header .contact-info {
+    display: flex;
+    align-items: center;
+}
+.laptop-header .contact-info a {
+    color: black;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    background-color: white;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 130px;
+}
+.nav-links a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bolder;
+}
+.nav-links a:hover {
+    text-decoration: underline;
+}
+.sp2 {
+    margin-left: 300px;
+}
+.book {
+    background-color: rgb(255, 192, 74);
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 50px;
+}
+.book a {
+    color: #333;
+}
+.book:hover {
+    background-color: #69a5d3;
+}
+.nav-link.disabled {
+    pointer-events: none;
+    color: gray;
+    opacity: 0.6;
+  }
+  .hidden {
+  display: none;
+}
+#sphome{
+margin-left: 150px;
+}
+
+/* Fixed Icons */
+.fixed-icons {
+  position: fixed;
+  bottom: 15%; /* Adjusted to move icons slightly higher (5% from the bottom) */
+  width: 100%; /* Full width to position left and right icons */
+  z-index: 1000;
+  pointer-events: none; /* Prevent blocking other elements */
+}
+
+.fixed-icons .call-icon,
+.fixed-icons .whatsapp-icon {
+  pointer-events: auto; /* Allow clicking on icons */
+  font-size: 3vw;
+  text-decoration: none;
+  padding: 0.8vw;
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  position: absolute;
+}
+
+.fixed-icons .call-icon {
+  left: 20px; /* Position on the bottom-left */
+  background-color: #f0f8ff; /* Light blue background */
+  color: #0056b3; /* Blue icon color */
+  border: 2px solid #0056b3; /* Blue border */
+}
+
+.fixed-icons .call-icon:hover {
+  transform: scale(1.2); /* Slight zoom-in effect */
+  background-color: #0056b3; /* Darker blue on hover */
+  color: #fff; /* White icon color on hover */
+}
+
+.fixed-icons .whatsapp-icon {
+  right: 20px; /* Position on the bottom-right */
+  background-color: #f5e8e8; /* Light green background */
+  color: #25D366; /* WhatsApp green */
+  border: 2px solid #25D366; /* Green border */
+}
+
+.fixed-icons .whatsapp-icon:hover {
+  transform: scale(1.2); /* Slight zoom-in effect */
+  background-color: #25D366; /* WhatsApp green background */
+  color: #ffffff; /* White icon color on hover */
+  border-color: #128C7E; /* Darker green border on hover */
+}
+
+/* Pulse Effect */
+.fixed-icons .call-icon::after,
+.fixed-icons .whatsapp-icon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%; /* Slightly smaller pulse size */
+  height: 120%; /* Slightly smaller pulse size */
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.5); /* Red pulse effect with transparency */
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1);
+  animation: pulse 1.2s infinite; /* Faster animation for mobile */
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.5); /* Reduced scale for smaller pulse */
+    opacity: 0;
+  }
+}
+
+.hero {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+ }
+.slideshow {
+    display: flex;
+    width: 330%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    margin-top: 20px;
+}
+.slide {
+   width: 100vw;
+    height: 100%;
+}
+.indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.indicator.active {
+    background-color: #ffcc00;
+}
+span {
+    color: #3b79e4;
+}
+b{
+    color: #6183f4;
+}
+.special-packages {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+.special-packages h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.package-item {
+    position: relative;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: scale(0.8) translateY(50px);
+    animation: packageEntry 1s cubic-bezier(0.25, 0.8, 0.5, 1) forwards;
+}
+
+.image-container {
+    position: relative;
+}
+.package-item img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 4px solid #3b5998;
+    transition: transform 0.3s ease;
+}
+.package-item:hover img {
+    transform: scale(1.05);
+}
+.package-item h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+.package-item p {
+    padding: 0 20px 20px;
+    color: #555;
+}
+.package-actions {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 20px;
+}
+.action-btn {
+    padding: 10px 15px;
+    background-color: #74C0FC;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+    background-color: #0056b3;
+}
+.duration-label {
+    position: absolute;
+    bottom: 10px;
+    right: 0px;
+    background-color: rgb(142 176 239 / 70%);
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+@keyframes packageEntry {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(50px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.05) translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.package-item:nth-child(1) {
+    animation-delay: 0s;
+}
+.package-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.package-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.package-item:hover {
+    transform: scale(1.1) translateY(-15px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.package-item:hover img {
+    transform: scale(1.05);
+}
+.about {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 60px;
+}
+.varanasi-highlight {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.highlight-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Start hidden */
+    transform: translateX(200px) rotate(20deg) scale(0.8); /* Start off-screen and scaled down */
+    animation: attractionEnter 1s cubic-bezier(0.25, 0.8, 0.5, 1) forwards;
+}
+@keyframes attractionEnter {
+    0% {
+        opacity: 0;
+        transform: translateX(200px) rotate(20deg) scale(0.8); /* Start off-screen */
+    }
+    60% {
+        opacity: 1;
+        transform: translateX(-10px) rotate(-2deg) scale(1.05); /* Slight overshoot for attraction */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0) scale(1); /* Final settled position */
+    }
+}
+.highlight-item:nth-child(1) {
+    animation-delay: 0s;
+}
+.highlight-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.highlight-item:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.highlight-item:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.highlight-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.highlight-item img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 4px solid #3b5998;
+}
+.highlight-item h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+.highlight-item p {
+    padding: 0 20px 20px;
+    color: #555;
+    font-size: 1rem;
+}
+.car-rental {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+}
+.car-rental h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 50px;
+}
+.rental-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.rental-item {
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.rental-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.rental-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 4px solid #3b5998;
+}
+.rental-item h3 {
+    margin: 20px 0 10px;
+    font-size: 1.5rem;
+    color: #333;
+}
+.rental-item p {
+    padding: 0 20px 20px;
+    color: #555;
+    font-size: 1rem;
+}
+.book-package {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+.book-package h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 70px;
+}
+.book-package-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    gap: 20px;
+}
+.book-package-image {
+    flex: 1 1 45%;
+    min-width: 300px;
+    text-align: center;
+}
+.book-package-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px;
+    border: 4px solid #3b5998;
+}
+.book-package-form {
+    flex: 1 1 50%;
+    min-width: 300px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.book-package-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.book-package-form input,
+.book-package-form button {
+    width: 95%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.book-package-form select,
+.book-package-form textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.book-package-form textarea {
+    height: 100px;
+    resize: vertical;
+}
+.book-package-form button {
+    width: 100%;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+.book-package-form button:hover {
+    background-color: #2a3d6b;
+}
+textarea {
+    width: 100%;
+    max-width: 100%;
+    overflow-y: hidden;
+    resize: none;
+    padding: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    line-height: 1.5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+textarea::-webkit-resizer {
+    display: none;
+}
+
+.about-us {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: 550px;
+    border-radius: 8px;
+}
+
+.about-us-text {
+    max-width: 600px;
+}
+
+.about-us h2 {
+    margin-top: 100px;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 50px;
+}
+
+.about-us h2 span {
+    color: #74C0FC;
+}
+.about-us p{
+    font-size:21px;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+.footer-box {
+    flex: 1;
+    min-width: 250px;
+}
+.help-support {
+    flex: 2;
+    max-width: 45%;
+}
+.help-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.link-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.link-column a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+}
+.footer-box.help-support h3 {
+    margin-left: 200px;
+}
+.link-column a:hover {
+    color: #f4a261;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .header {
+        padding: 10px 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    .header img {
+        max-height: 50px;
+        margin-bottom: 10px;
+    }
+    .nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .book-package-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+     .rental-grid, .varanasi-highlight {
+        grid-template-columns: 1fr 1fr;
+    }
+    .package-grid{
+        grid-template-columns: 1fr;   
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 0px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header img {
+        max-height: 40px;
+    }
+    .special-packages h2, .about h2, .contact h2 {
+        font-size: 1.8rem;
+    }
+    .contact-info p, .contact-info a {
+        font-size: 0.8rem;
+    }
+    .hero {
+        height: 200px;
+    }
+    .footer-content, .book-package-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .package-item, .rental-item, .highlight-item {
+        width: 100%;
+    }
+    .book-package-form {
+        padding: 10px;
+    }
+    
+.about-us p {
+    font-size: 1px;
+    font-weight: normal; 
+}
+}
+
+@media (max-width: 768px) {
+    .mobile-nav-links a {
+        color: white;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
+       font-size: 15px;
+    }
+    
+    .hero {
+        height: 300px;
+    }
+    .nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+        background: #333;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        padding: 10px 0;
+    }
+    .nav ul.active {
+        display: flex;
+    }
+    .nav li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .menu-icon {
+        display: block;
+        margin-right: 100px;
+    }
+    .mobile-nav-links a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+   
+}
+.package-grid, .rental-grid, .varanasi-highlight {
+        grid-template-columns: 1fr;
+    }
+    .contact-info p, .contact-info a {
+        font-size: 12px;
+    }
+    .book-package-image img {
+        max-width: 80%;
+    }
+    .footer-content {
+        padding: 15px;
+    }
+    .hero {
+        position: relative;
+        height: 90px;
+        width: 10%;
+        overflow: hidden;
+        z-index: 1;
+      
+    }
+    .slide {
+        width: 100vw;
+         height: 100%;
+         margin-top: 10px;
+     }
+}
+
+  @media (max-width: 768px) {
+    .mobile-view {
+      display: block;
+    }
+   .laptop-view {
+      display: none;
+    }
+  
+    .special-packages h2 {
+        margin-bottom: 45px;
+        color: #333;
+        text-transform: uppercase;
+        margin-top: 220px;
+    }
+    .about h2 {
+        margin-bottom: 40px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 220px;
+    }
+
+    
+    .hero {
+    position: relative;
+    height: 400px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 165px;
+    }
+    .footer-box.help-support h3 {
+    margin-left: 5%;
+    }
+ .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    width: 110%;
+    }
+ .book {
+    background-color: rgb(255, 192, 74);
+   padding-left: 7%;
+    border-radius: 5px; 
+    margin:auto;
+ }
+ .about-us {
+    padding: 1.5rem;
+}
+
+.about-us-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-image img {
+    height: 275px; 
+    width: 90%; 
+    border-radius: 8px;
+}
+
+.about-us-text {
+    max-width: 100%; 
+    text-align: center; 
+}
+
+.about-us h2 {
+    font-size: 36px;
+    margin-top: 170px;
+}
+
+.about-us p {
+    font-size: 18px;
+    font-weight: normal; 
+}
+  }
+
+  @media (min-width: 769px) {
+    .mobile-view {
+      display: none;
+    }
+  
+    .laptop-view {
+      display: block;
+    }
+  }
+ 
+  @media (max-width: 790px) {
+    .laptop-header .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f5f5f5;
+        color: white;
+        height: 120px;
+        position: fixed;
+        top:0px;
+        width: 100%;
+        z-index: 10;
+    }
+    .sp2{
+        margin-left:150px;;
+    }
+    .nav-links a {
+        color: rgb(0, 0, 0);
+        text-decoration: none;
+        font-size: 11px;
+        font-weight: bolder;
+    }
+
+  }
+  @media (min-width: 625px) {
+   
+.about-us p {
+    font-size: 15px;
+    font-weight: normal; 
+} 
+  }
+
+  @media (max-width: 600px) {
+    .fixed-icons .call-icon,
+.fixed-icons .whatsapp-icon {
+    padding: 4vw;
+}
+    }
+  #loader {
+    display: none;
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #2094e1;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 2s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
