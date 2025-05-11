@@ -37,16 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   showSlide(0);
 });
-function disableNavLinks() {
-  const navLinks = document.querySelector('.mobile-nav-links');
-  if (navLinks) {
-      navLinks.style.display = 'none';
+ function toggleNav() {
+    const nav = document.querySelector('.mobile-nav-links');
+    nav.classList.toggle('active');
   }
-  const bookSection = document.querySelector('#book-package');
-  if (bookSection) {
-      bookSection.scrollIntoView({ behavior: 'smooth' });
+
+  function disableNavLinks() {
+    const nav = document.querySelector('.mobile-nav-links');
+    nav.classList.remove('active');
   }
-}
+
 document.addEventListener("input", (event) => {
   if (event.target.tagName === "TEXTAREA") {
       autoResizeTextarea(event.target);
@@ -56,10 +56,7 @@ function autoResizeTextarea(textarea) {
   textarea.style.height = "auto";
   textarea.style.height = `${textarea.scrollHeight}px`;
 }
-function toggleNav() {
-  const navLinks = document.querySelector('.mobile-nav-links');
-  navLinks.classList.toggle('active');
-}
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById("yourFormId");
